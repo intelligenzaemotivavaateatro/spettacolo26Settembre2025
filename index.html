@@ -1,0 +1,967 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>La Comunicazione Va a Teatro – Firenze, 26 Settembre 2025</title>
+  <meta name="description" content="Spettacolo, formazione ed emozione al Teatro Puccini. 26/09/2025 – Prenota ora. Il ricavato è devoluto ad AVO Firenze.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0f0f10;
+      --fg:#ffffff;
+      --fg-dim:#cfcfcf;
+      --accent:#e63946;
+      --accent-2:#ffd166;
+      --muted:#1a1a1c;
+      --max:1100px;
+      --radius:16px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:"Poppins", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", sans-serif;
+      color:var(--fg);
+      background:var(--bg);
+      line-height:1.6;
+      -webkit-font-smoothing:antialiased;
+    }
+    a{color:var(--accent);text-decoration:none}
+    a.btn{
+      display:inline-block;
+      background:var(--accent);
+      color:#fff;
+      padding:16px 28px;
+      border-radius:9999px;
+      font-weight:600;
+      transition:opacity .2s;
+    }
+    a.btn:hover{opacity:.9}
+    header{
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      background: radial-gradient(circle at 50% 20%, rgba(230,57,70,.15), transparent 60%),
+                  linear-gradient(180deg, rgba(0,0,0,.2), rgba(0,0,0,0));
+      padding:80px 24px 40px;
+      text-align:center;
+    }
+    header h1{
+      font-size:clamp(2.2rem, 5vw, 4rem);
+      line-height:1.1;
+      margin:0 0 16px;
+      font-weight:800;
+    }
+    header h2{
+      font-size:1.25rem;
+      font-weight:400;
+      margin:0 0 32px;
+      color:var(--fg-dim);
+    }
+    .badge{
+      display:inline-block;
+      padding:6px 12px;
+      background:var(--muted);
+      border-radius:9999px;
+      font-size:.9rem;
+      margin:0 4px 6px;
+    }
+    .container{max-width:var(--max); margin:0 auto; padding:80px 24px;}
+    section{padding:80px 0;}
+    section:nth-child(even){background:#141416;}
+    h3{
+      font-size:2rem;
+      margin:0 0 24px;
+      font-weight:700;
+    }
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));
+      gap:24px;
+    }
+    .card{
+      background:var(--muted);
+      border-radius:var(--radius);
+      padding:24px;
+    }
+    .subtle{color:var(--fg-dim)}
+    .countdown{
+      display:flex;
+      justify-content:center;
+      gap:12px;
+      margin:24px 0 36px;
+      flex-wrap:wrap;
+    }
+    .cd-box{
+      background:var(--muted);
+      border-radius:var(--radius);
+      padding:16px 18px;
+      min-width:90px;
+    }
+    .cd-box span{
+      display:block;
+      text-align:center;
+    }
+    .cd-num{
+      font-size:1.8rem;
+      font-weight:700;
+      line-height:1;
+    }
+    .cd-label{
+      font-size:.75rem;
+      text-transform:uppercase;
+      letter-spacing:.06em;
+      color:var(--fg-dim);
+    }
+    .faq-item{
+      margin-bottom:18px;
+      background:var(--muted);
+      border-radius:var(--radius);
+      padding:18px 20px;
+    }
+    footer{
+      padding:48px 24px;
+      background:#0b0b0c;
+      color:var(--fg-dim);
+      font-size:.9rem;
+    }
+    .cta-block{
+      text-align:center;
+      margin:48px 0 0;
+    }
+    .pill{
+      display:inline-block;
+      background:rgba(255,255,255,.06);
+      padding:6px 12px;
+      border-radius:999px;
+      font-size:.8rem;
+      margin-bottom:12px;
+      letter-spacing:.03em;
+    }
+    .logo-avo{
+      display:block;
+      max-width:180px;
+      margin:12px 0 0;
+      opacity:.85;
+    }
+    .center{text-align:center}
+    .map{
+      width:100%;
+      height:380px;
+      border:0;
+      border-radius:var(--radius);
+      filter:grayscale(1) contrast(1.1) opacity(.8);
+    }
+    .foto-animata:hover {
+      transform: scale(1.045) translateY(-10px) rotate(-1deg);
+      box-shadow:0 12px 48px rgba(0,0,0,0.22);
+      z-index:2;
+    }
+    .coach-box { position:relative; max-width:100%; margin-bottom: 12px; }
+    .coach-box .coach-desc {
+      opacity:0;
+      pointer-events:none;
+      transition:opacity .4s;
+      position:absolute;
+      left:0; right:0; bottom:0;
+      background:rgba(15,15,16,0.93);
+      color:#fff;
+      padding:24px 18px 18px 18px;
+      border-radius:0 0 22px 22px;
+      font-size:.98em;
+      line-height:1.5;
+      text-align:left;
+      max-width:100%;
+      margin:auto;
+      z-index:3;
+      min-height:80px;
+      display:block;
+    }
+    .coach-box:hover .coach-desc,
+    .coach-box:focus-within .coach-desc {
+      opacity:1;
+      pointer-events:auto;
+    }
+    .coach-box .coach-name {
+      margin-bottom:8px;
+      font-weight:600;
+      font-size:1.1em;
+      position:relative;
+      z-index:2;
+      background:rgba(15,15,16,0.85);
+      padding:6px 0 0 0;
+      text-align:center;
+      border-radius:12px 12px 0 0;
+    }
+    .coach-columns {
+      display: flex;
+      gap: 64px;
+      justify-content: center;
+      align-items: stretch;
+      flex-wrap: wrap;
+      margin-top: 48px;
+    }
+    .coach-col {
+      flex: 1 1 340px;
+      min-width: 300px;
+      max-width: 400px;
+      background: #18181a;
+      border-radius: 28px;
+      padding: 36px 24px 32px 24px;
+      box-sizing: border-box;
+      text-align: center;
+      box-shadow: 0 4px 32px rgba(0,0,0,0.10);
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100%;
+      border: none;
+    }
+    .coach-col.praxi {
+      background: #1a1a1c;
+      border-color: #fff;
+    }
+    .coach-col .coach-logo {
+      width: 220px;
+      height: auto;
+      margin-bottom: 28px;
+      margin-top: 0;
+    }
+    .coach-col .coach-title {
+      font-size: 1.5em;
+      font-weight: 800;
+      letter-spacing: 0.03em;
+      margin-bottom: 24px;
+      margin-top: 0;
+      color: var(--accent);
+      text-shadow: 0 2px 8px rgba(0,0,0,0.10);
+    }
+    .coach-col.praxi .coach-title {
+      color: var(--accent-2);
+    }
+    .coach-list {
+      display: flex;
+      flex-direction: column;
+      gap: 36px;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+    }
+    .coach-box {
+      position: relative;
+      max-width: 100%;
+      margin-bottom: 0;
+      width: 100%;
+      max-width: 340px;
+      background: none;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .coach-box img {
+      width: 100%;
+      height: auto;
+      max-width: 340px;
+      border-radius: 22px;
+      box-shadow: 0 4px 18px rgba(0,0,0,0.13);
+      display: block;
+      margin: 0 auto;
+    }
+    .coach-box .coach-name {
+      margin-top: 14px;
+      font-weight: 700;
+      font-size: 1.13em;
+      color: #fff;
+      text-align: center;
+      background: none;
+      position: static;
+      padding: 0;
+      border-radius: 0;
+      box-shadow: none;
+    }
+    .coach-box .coach-desc {
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity .4s, transform .4s;
+      position: absolute;
+      left: 0; right: 0; bottom: 0;
+      background: linear-gradient(0deg, rgba(15,15,16,0.97) 90%, rgba(15,15,16,0.0) 100%);
+      color: #fff;
+      padding: 38px 18px 18px 18px;
+      border-radius: 0 0 22px 22px;
+      font-size: .99em;
+      line-height: 1.5;
+      text-align: left;
+      max-width: 100%;
+      margin: auto;
+      z-index: 3;
+      min-height: 90px;
+      display: block;
+      transform: translateY(30px);
+    }
+    .coach-box:hover .coach-desc,
+    .coach-box:focus-within .coach-desc {
+      opacity: 1;
+      pointer-events: auto;
+      transform: translateY(0);
+    }
+    .palco-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 28px;
+      margin-top: 32px;
+    }
+    @media (max-width: 700px) {
+      .palco-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+    }
+    @media (max-width: 1100px) {
+      .coach-columns { gap: 32px; }
+      .coach-col { max-width: 100%; }
+      .coach-box img { width: 100%; max-width: 340px; }
+      .coach-box { width: 100%; }
+    }
+    @media (max-width: 700px) {
+      .coach-columns {
+        flex-direction: column;
+        gap: 32px;
+        align-items: stretch;
+      }
+      .coach-col {
+        max-width: 100%;
+        min-width: 0;
+        width: 100%;
+        margin-bottom: 24px;
+        min-height: unset;
+      }
+      .coach-list { width: 100%; }
+      .coach-box img { width: 100%; max-width: 100%; }
+      .coach-box { width: 100%; max-width: 100%; }
+    }
+    .successi-bg {
+      position: relative;
+      background: linear-gradient(120deg, rgba(15,15,16,0.82) 60%, rgba(230,57,70,0.18) 100%), url('teatroPuccini.jpg') center center/cover no-repeat, url('dataTeatro.png') right bottom/auto 60% no-repeat;
+      border-radius: 36px;
+      overflow: hidden;
+      min-height: 420px;
+      box-shadow: 0 8px 48px rgba(0,0,0,0.18);
+      margin-bottom: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+    }
+    .successi-content {
+      position: relative;
+      z-index: 2;
+      padding: 64px 36px 64px 36px;
+      max-width: 700px;
+      margin: 0 auto;
+      color: #fff;
+      text-shadow: 0 2px 16px rgba(0,0,0,0.22);
+      background: rgba(15,15,16,0.60);
+      border-radius: 32px;
+      box-shadow: 0 2px 24px rgba(0,0,0,0.10);
+      backdrop-filter: blur(2px);
+    }
+    @media (max-width: 900px) {
+      .successi-bg { min-height: 320px; border-radius: 18px; }
+      .successi-content { padding: 36px 12px; border-radius: 18px; }
+    }
+    .successi-bg2 {
+      position: relative;
+      min-height: 420px;
+      border-radius: 36px;
+      overflow: hidden;
+      margin-bottom: 48px;
+      background: #111;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+    }
+    .successi-bg2 .bg-img-left {
+      position: absolute;
+      left: 0; top: 0; bottom: 0;
+      width: 50%;
+      background: url('dataTeatro.png') left center/cover no-repeat;
+      filter: brightness(0.95) blur(0.5px);
+      z-index: 1;
+    }
+    .successi-bg2 .bg-img-right {
+      position: absolute;
+      right: 0; top: 0; bottom: 0;
+      width: 50%;
+      background: url('teatroPuccini.jpg') right center/cover no-repeat;
+      filter: brightness(0.95) blur(0.5px);
+      z-index: 1;
+    }
+    .successi-bg2 .successi-content2 {
+      position: relative;
+      z-index: 2;
+      padding: 48px 36px 48px 36px;
+      max-width: 700px;
+      margin: 0 auto;
+      color: #fff;
+      text-shadow: 0 2px 16px rgba(0,0,0,0.22);
+      background: rgba(15,15,16,0.72);
+      border-radius: 0;
+      box-shadow: 0 2px 24px rgba(0,0,0,0.10);
+      backdrop-filter: blur(2px);
+      text-align: center;
+    }
+    @media (max-width: 900px) {
+      .successi-bg2 { min-height: 320px; border-radius: 18px; }
+      .successi-bg2 .successi-content2 { padding: 24px 8px; border-radius: 18px; }
+      .successi-bg2 .bg-img-left, .successi-bg2 .bg-img-right { width: 100%; height: 50%; left: 0; right: 0; }
+      .successi-bg2 .bg-img-left { top: 0; bottom: 50%; background-position: top center; }
+      .successi-bg2 .bg-img-right { top: 50%; bottom: 0; background-position: bottom center; }
+    }
+    .palco-bg {
+      background: #0f0f10;
+      border-radius: 36px;
+      padding: 48px 0;
+      position: relative;
+      overflow: hidden;
+    }
+    .palco-bg .palco-bg-img {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 100%;
+      max-width: 900px;
+      min-width: 320px;
+      height: auto;
+      transform: translate(-50%, -50%);
+      opacity: 0.70;
+      z-index: 1;
+      pointer-events: none;
+      filter: none;
+    }
+    .palco-bg .container {
+      position: relative;
+      z-index: 2;
+    }
+    .palco-bg::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: #0f0f10;
+      opacity: 0.70;
+      z-index: 1;
+      pointer-events: none;
+    }
+    .palco-bg .palco-grid, .palco-bg h3 {
+      position: relative;
+      z-index: 2;
+    }
+    .concept-bg {
+      position: relative;
+      border-radius: 36px;
+      overflow: hidden;
+      margin-bottom: 48px;
+      min-height: 480px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: url('dataTeatro.png') top center/cover no-repeat, url('teatroPuccini.jpg') bottom center/cover no-repeat;
+    }
+    .concept-bg::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(15,15,16,0.82) 0%, rgba(15,15,16,0.18) 30%, rgba(15,15,16,0.18) 70%, rgba(15,15,16,0.82) 100%);
+      z-index: 1;
+      pointer-events: none;
+    }
+    .concept-bg .concept-content {
+      position: relative;
+      z-index: 2;
+      padding: 56px 32px 56px 32px;
+      max-width: 700px;
+      margin: 0 auto;
+      color: #18181a;
+      background: rgba(255,255,255,0.82);
+      border-radius: 28px;
+      box-shadow: 0 4px 32px rgba(0,0,0,0.13);
+      backdrop-filter: blur(8px);
+      text-align: center;
+      font-weight: 500;
+    }
+    .concept-bg .concept-content h3 {
+      color: #18181a;
+      font-weight: 800;
+      text-shadow: none;
+    }
+    .concept-bg .concept-content strong {
+      color: var(--accent);
+      font-weight: 700;
+    }
+    @media (max-width: 900px) {
+      .concept-bg { min-height: 320px; border-radius: 18px; }
+      .concept-bg .concept-content { padding: 28px 8px; border-radius: 14px; }
+    }
+    section {
+      padding: 48px 0;
+    }
+    .container {
+      padding: 48px 24px;
+      max-width: var(--max);
+      margin: 0 auto;
+    }
+    @media (max-width: 900px) {
+      section { padding: 32px 0; }
+      .container { padding: 32px 12px; }
+    }
+    header .container {
+      margin-bottom: 0;
+    }
+    section#concept {
+      margin-top: -32px;
+    }
+  </style>
+</head>
+<body>
+
+  <header style="
+  background:
+    linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0,0,0,0.5)),
+    radial-gradient(circle at 50% 20%, rgba(230,57,70,0.15), transparent 60%),
+    url('logoSpettacolo.png') center/cover no-repeat;
+">
+  <div class="container">
+    <div class="pill" style="color:#ffffff;"><strong>Spettacolo • Formazione • Emozione</strong></div>
+    <h1 style="color:#ffffff;">LA COMUNICAZIONE VA A TEATRO</h1>
+    <h2 style="color:#ffffff;"><strong>Parlare o Comunicare? Vieni a vivere la differenza.</strong></h2>
+
+    <div class="subtle" style="margin-bottom:24px; color:#ffffff;">
+      <span class="badge">26 Settembre 2025 · Ore 21:15</span>
+      <span class="badge">Teatro Puccini, Firenze</span>
+    </div>
+
+    <p class="subtle" style="color:#ffffff;"><strong>⏳ Manca pochissimo!</strong></p>
+
+    <!-- Countdown -->
+    <div id="countdown" class="countdown" aria-label="Countdown allo spettacolo"></div>
+    <a href="https://www.evients.com/events/la-comunicazione-va-a-teatro/4ff8a5940f9b4376bd99c46f9a9e9980" class="btn">Prenota ora</a>
+  </div>
+</header>
+
+<main>
+
+  <section id="concept">
+    <div class="container">
+      <h3>Dopo tre anni di successi, torniamo a Firenze</h3>
+      <p>
+        Con “L'intelligenza emotiva va a teatro” abbiamo entusiasmato Bologna, Milano, Torino e Roma, e ora siamo pronti a tornare a Firenze con un nuovo spettacolo formativo interattivo e coinvolgente.<br>
+        Abbiamo portato l’intelligenza emotiva nei teatri di Bologna, Milano, Torino e Roma<br>
+        e ora siamo pronti a tornare a Firenze con un nuovo spettacolo formativo interattivo e coinvolgente che tratterà il tema della <strong>COMUNICAZIONE</strong>, esplorando le dinamiche che ne ostacolano l'efficacia, come i pregiudizi, gli stili comunicativi aggressivi e passivi e il mancato ascolto.<br>
+        Il tutto spiegato in modo pratico attraverso scene teatrali chiare, immediate e divertenti.<br>
+        A completare lo spettacolo, performance di alto livello di musica, canto e di ballo.
+      </p>
+      <p>
+        Abbiamo portato l’intelligenza emotiva nei teatri di <strong>Bologna, Milano, Torino e Roma</strong>.<br>
+        Ora arriviamo a Firenze con uno <strong>spettacolo dedicato alla comunicazione</strong>:<br>
+        pregiudizi, regole, stili e ascolto <strong>prenderanno vita sul palco</strong> con autenticità, energia ed emozione.
+      </p>
+      <ul>
+        <li><strong>🎭 Spettacolo</strong> – scene teatrali vive e coinvolgenti</li>
+        <li><strong>🎓 Formazione</strong> – contenuti chiari, concreti, applicabili</li>
+        <li><strong>❤️ Emozione</strong> – esperienze che restano nel cuore</li>
+      </ul>
+      <div class="cta-block">
+        <a href="#programma" class="btn" style="background:var(--accent-2); color:#000;">Scopri il programma</a>
+      </div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:24px;margin-top:40px;">
+        <img src="dataTeatro.png" alt="Data Teatro" style="max-width:480px;width:100%;height:auto;border-radius:18px;box-shadow:0 2px 16px rgba(0,0,0,0.10);">
+        <img src="teatroPuccini.jpg" alt="Teatro Puccini" style="max-width:480px;width:100%;height:auto;border-radius:18px;box-shadow:0 2px 16px rgba(0,0,0,0.10);">
+      </div>
+    </div>
+  </section>
+      
+    </div>
+  </section>
+
+  <section id="programma">
+    <div class="palco-bg">
+      <img src="logoSpettacolo.png" alt="Logo Spettacolo" class="palco-bg-img">
+      <div class="container">
+        <h3>Cosa vivrai sul palco</h3>
+        <div class="palco-grid">
+          <div class="card">Pregiudizi smontati attraverso situazioni reali</div>
+          <div class="card">Regole e stili di comunicazione messi alla prova</div>
+          <div class="card">Ascolto attivo, conflitto ed empatia rappresentati sul palco</div>
+          <div class="card">Dimostrazioni pratiche, momenti di riflessione e… colpi di teatro</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="relatori">
+    <div class="container" style="max-width:1100px;">
+      <h3>I nostri relatori</h3>
+      <p class="subtle">Quattro voci, quattro punti di vista: teoria, pratica, casi reali e un filo narrativo comune.</p>
+      <div style="display:flex;align-items:center;justify-content:center;gap:48px;margin:48px 0 0 0;flex-wrap:wrap;">
+        <img src="Logo Relatori.jpg" alt="Logo Relatori" style="width:160px;height:160px;object-fit:cover;border-radius:50%;border:8px solid #fff;box-shadow:0 2px 16px rgba(0,0,0,0.18);background:#fff;display:block;order:1;">
+        <img class="foto-animata" src="Relatori.jpg" alt="Relatori" style="flex:1 1 0;min-width:320px;max-width:700px;width:100%;height:auto;object-fit:cover;border-radius:36px;box-shadow:0 4px 32px rgba(0,0,0,0.13);order:2;transition:transform .35s cubic-bezier(.22,1,.36,1),box-shadow .35s cubic-bezier(.22,1,.36,1);">
+      </div>
+      <div style="margin-top:32px; max-width:800px; line-height:1.5;">
+        <p>Sono al settimo spettacolo assieme e l’affinità e l’amicizia che li lega è unica.</p>
+        <p><strong>Stefano:</strong> esperienza, dinamismo e generosità lo caratterizzano e ha fatto della gentilezza uno stile di vita. Esperto di Intelligenza Emotiva, ha ideato questo spettacolo per far conoscere il potere della comunicazione.</p>
+        <p><strong>Federica:</strong> dinamicità, allegria e determinazione sono le sue caratteristiche. Federica è una donna, mamma, sorella, amica e manager super vitale ed entusiasta della vita, consapevole di “non sapere”!</p>
+        <p><strong>Laura:</strong> il suo motto preferito è “la conoscenza rende liberi”. Favorire il benessere e l’espressione dei talenti è una sua grande passione. È naturopata, formatrice e affascinata dal potere delle “intelligenze”.</p>
+        <p><strong>Antonio:</strong> è un uomo originale e autentico. Ama spaziare con la creatività e la fantasia. Grande conoscitore dell’intelligenza emotiva e della comunicazione, le pratica con successo nella vita e nel lavoro.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="attori">
+    <div class="container" style="max-width:1100px;">
+      <h3>Gli Attori Erranti</h3>
+      <p>
+        <strong>Interpreti visionari</strong> che daranno forma ai concetti, alle emozioni e ai contrasti della comunicazione moderna,
+        trasformando idee in <strong>scene autentiche e profonde</strong>.
+      </p>
+      <p>
+        <strong>Massimo, Elena, Antonella e Donatella.</strong><br>
+        Da sempre assieme ai Relatori in tutti gli spettacoli sull’Intelligenza emotiva. Professionisti bravi e carismatici.<br>
+        L’associazione nasce nel 2021 e raccoglie attori di varia provenienza, formati in scuole teatrali e nomadi dei palcoscenici, accomunati dalla voglia di divertire, emozionare, terribilmente seri ma con l’intento di non prendersi troppo sul serio…
+      </p>
+      <div style="display:flex;align-items:center;justify-content:center;gap:48px;margin:48px 0 0 0;flex-wrap:wrap;">
+        <div style="display:flex;align-items:center;justify-content:center;background:#fff;border-radius:50%;padding:18px;box-shadow:0 2px 16px rgba(0,0,0,0.10);">
+          <img src="Gli attori erranti LOGO.jpg" alt="Logo Attori Erranti" style="width:160px;height:160px;object-fit:contain;display:block;background:#fff;border-radius:50%;">
+        </div>
+        <img class="foto-animata" src="ATTORI ERRANTI 4.jpg" alt="Attori Erranti" style="flex:1 1 0;min-width:320px;max-width:700px;width:100%;height:auto;object-fit:cover;border-radius:36px;box-shadow:0 4px 32px rgba(0,0,0,0.13);order:2;transition:transform .35s cubic-bezier(.22,1,.36,1),box-shadow .35s cubic-bezier(.22,1,.36,1);">
+      </div>
+    </div>
+  </section>
+
+  <section id="coach">
+    <div class="container" style="max-width:1100px;">
+      <h3>I nostri coach</h3>
+      <div class="coach-columns">
+        <!-- ForMax -->
+        <div class="coach-col formax">
+          <img src="formax/ForMax marchio piccolo.png" alt="ForMax" class="coach-logo">
+          <div class="coach-list">
+            <div class="coach-box">
+              <img src="formax/etzi.jpg" alt="Alessio Etzi">
+              <div class="coach-name">Alessio Etzi</div>
+              <div class="coach-desc">
+                Fondatore e titolare di ForMax, agenzia specializzata<br>
+                nella formazione esperienziale e nello sviluppo delle competenze.<br>
+                La sua attività ha avuto origine nel mondo dello sport ed è tuttora<br>
+                mental coach nell'ambito del basket professionistico. Innovatore<br>
+                nell'applicazione delle metodologie e dei concetti, da vari anni<br>
+                propone una personale ricerca finalizzata alla comprensione degli<br>
+                ecosistemi relazionali e alla valorizzazione del potenziale umano
+              </div>
+            </div>
+            <div class="coach-box">
+              <img src="formax/peroni.jpg" alt="Michele Peroni">
+              <div class="coach-name">Michele Peroni</div>
+              <div class="coach-desc">
+                Manager e formatore con oltre 25 anni di esperienza, è specializzato in negoziazioni one-to-one.<br>
+                Ha iniziato la sua carriera come commerciale nel mondo dello spettacolo, per poi intraprendere un lungo percorso nella formazione motivazionale e nella negoziazione, fino a specializzarsi nella gestione di risorse nel settore delle energie rinnovabili.<br>
+                Consapevole dell'importanza della comunicazione emotiva, ha deciso di mettere a disposizione di aziende e privati il patrimonio di competenze maturato negli anni, dando vita a un percorso formativo pensato per valorizzare il potenziale di ciascuno.<br>
+                Crede fermamente che la comunicazione sia davvero efficace solo quando parte dal cuore e arriva al cuore.
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Praxi -->
+        <div class="coach-col praxi">
+          <img src="praxi/PRAXI-logo.jpg" alt="Praxi" class="coach-logo">
+          <div class="coach-list">
+            <div class="coach-box">
+              <img src="praxi/Benedetta Mosco.jpg" alt="Benedetta Mosco">
+              <div class="coach-name">Benedetta Mosco</div>
+              <div class="coach-desc">
+                Iscritta all’Albo e consulente in PRAXI. Ha lavorato presso il Dipartimento di Psicologia dell’Università La Sapienza e ha svolto esperienze all’estero in California e Brasile.<br>
+                Successivamente si è occupata di HR in Ermanno Scervino, per poi consolidarsi nella consulenza HR in PRAXI, curando progetti di Executive Search, assessment e sviluppo competenze per aziende di diversi settori.<br>
+                Integra metodo e sensibilità psicologica per valorizzare il potenziale delle persone e sostenere la crescita organizzativa.
+              </div>
+            </div>
+            <div class="coach-box">
+              <img src="praxi/Lorenzo Galli.jpg" alt="Lorenzo Galli">
+              <div class="coach-name">Lorenzo Galli</div>
+              <div class="coach-desc">
+                È Senior HR Consultant in PRAXI, dove segue tutte le fasi della selezione per Executive e Middle, dai bisogni aziendali alla proposta ai candidati.<br>
+                Gestisce anche i rapporti commerciali, puntando su fiducia e collaborazione a lungo termine.<br>
+                Conosce bene il mercato del lavoro e adotta un approccio consulenziale centrato sulle persone.<br>
+                Negli anni ha sviluppato una metodologia basata sull’ascolto attivo e soluzioni personalizzate per ogni contesto organizzativo.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="performance">
+    <div class="container">
+      <h3>Le performance artistiche</h3>
+      <div style="max-width:700px; margin:0 auto;">
+        
+        <!-- Alessandro Abbiti -->
+        <div style="margin-bottom:48px; text-align:center;">
+          <img
+            src="Alessandro_Abbi.jpg"
+            alt="Alessandro Abbiti"
+            style="
+              max-width:400px;
+              width:100%;
+              height:auto;
+              object-fit:cover;
+              border-radius:16px;
+              box-shadow:0 4px 18px rgba(0,0,0,0.13);
+              margin:0 auto 16px;
+            "
+          >
+          <p><strong>Alessandro Abbiti</strong> – voce e intensità</p>
+          <p>
+            Chitarrista e improvvisatore, vive la musica come un'esperienza in costante trasformazione, capace di intrecciarsi con qualsiasi suono. Da anni attivo in formazioni acustiche diverse attraverso un costante accompagnamento melodico. Spazia dal pop internazionale e italiano rivisitato, a progetti strumentali sperimentali, portando sempre con sé la stessa attitudine: Ascoltare, creare, fondere. Alterna chitarra elettrica e acustica, arricchendo ogni brano con linee melodiche e tessiture nate nell'istante, come se fossero già parte della musica. La sua cifra distintiva è un flusso sonoro che trasforma ogni incontro in qualcosa di unico e irripetibile.
+          </p>
+        </div>
+  
+        <!-- Le riffe di Raffa -->
+        <div style="margin-bottom:48px; display:flex; align-items:center; justify-content:center; gap:24px; flex-wrap:wrap; text-align:center;">
+          <!-- Main photo -->
+          <img
+            src="rifferaffa.png"
+            alt="Le riffe di Raffa"
+            style="
+              max-width:400px;
+              width:100%;
+              height:auto;
+              object-fit:cover;
+              border-radius:16px;
+              box-shadow:0 4px 18px rgba(0,0,0,0.13);
+            "
+          >
+          <!-- Logo -->
+          <img
+            src="riffeRaffalogo.png"
+            alt="Logo Le riffe di Raffa"
+            style="
+              max-width:200px;
+              width:100%;
+              height:auto;
+              object-fit:contain;
+              filter: drop-shadow(0 2px 8px rgba(0,0,0,0.1));
+            "
+          >
+          <!-- Text under images -->
+          <div style="max-width:600px;">
+            <p><strong>Le riffe di Raffa</strong> – energia e ritmo</p>
+            <p>
+              Il gruppo vocale nasce nel 2006 su iniziativa di Maria Novella Berti, con l’obiettivo di riproporre in modo originale le canzoni e le interpreti che hanno segnato la sua infanzia, ispirandosi all’atmosfera dei varietà televisivi del sabato sera come quelli di Raffaella Carrà e delle gemelle Kessler. Il progetto è profondamente personale e affonda le radici nei ricordi familiari legati allo spettacolo.<br>
+              La scelta di eseguire brani a cappella deriva da una lunga esperienza nella musica corale e dalla convinzione che la voce, senza strumenti, possa esprimere un’enorme ricchezza musicale. Il canto a cappella, soprattutto nel repertorio pop, offre possibilità espressive e sperimentali ancora poco esplorate, richiedendo attenzione a intonazione, interpretazione, ritmo e riproduzione di suoni non convenzionalmente cantati.<br>
+              Attualmente il gruppo è formato da 9 voci femminili e affronta arrangiamenti scritti appositamente per valorizzare le caratteristiche vocali di ciascuna cantante, spesso eseguendo partiture fino a sei voci, accompagnate da microfoni e amplificazione.
+            </p>
+          </div>
+        </div>
+  
+        <!-- Dancing Time – emozione in movimento -->
+      <div style="margin-bottom:48px; display:flex; align-items:center; justify-content:center; gap:24px; flex-wrap:wrap; text-align:center;">
+        <!-- Main photo -->
+        <img
+          src="dancingtime.jpg"
+          alt="Dancing Time"
+          style="
+            max-width:400px;
+            width:100%;
+            height:auto;
+            object-fit:cover;
+            border-radius:16px;
+            box-shadow:0 4px 18px rgba(0,0,0,0.13);
+          "
+        >
+        <!-- Logo -->
+        <img
+          src="Scuola_Ballo.jpg"
+          alt="Logo Dancing Time"
+          style="
+            max-width:200px;
+            width:100%;
+            height:auto;
+            object-fit:contain;
+            filter: drop-shadow(0 2px 8px rgba(0,0,0,0.1));
+          "
+        >
+        <!-- Text block -->
+        <div style="max-width:600px;">
+          <p><strong>Dancing Time</strong> – emozione in movimento</p>
+          <p>
+            La scuola di danza, diretta da Benedetta Stiaccini, opera sul territorio fiorentino da tredici anni, organizza corsi per allievi dai 3 anni fino all’età adulta, che spaziano su varie discipline: dalla danza classica a quella moderna, dal repertorio classico fino a toccare ed approfondire le tecniche di contaminazione, funky e zumba.<br>
+            Fiore all’occhiello della scuola è il corso di Musical dove allievi piccoli e grandi si fondono per dare vita ad uno show di alta professionalità.
+          </p>
+        </div>
+      </div>
+  
+      </div>
+    </div>
+  </section>
+
+  <section id="solidale">
+    <div class="container center">
+  
+      <h3>Un evento che fa bene</h3>
+      <p>
+        Il ricavato sarà devoluto ad <strong>AVO Firenze</strong>, l’Associazione che porta
+        <strong>calore, ascolto e presenza</strong> negli ospedali e nelle case di cura della città.
+        Partecipare significa <strong>vivere un’esperienza</strong> e allo stesso tempo <strong>sostenere una causa</strong>.
+      </p>
+  
+      <div style="display:flex; justify-content:center; align-items:center; margin:48px 0;">
+        <img src="logo AVO Firenze.jpg" alt="AVO Firenze" class="logo-avo"
+             style="max-width:520px; width:100%; height:auto; display:block; margin:0 auto;">
+      </div>
+  
+      <!-- Titolo “E se volete...” centrato con emoji libro -->
+      <div style="text-align:center; margin-bottom:1rem;">
+        <span style="font-size:1.5rem; font-weight:700; display:inline-flex; align-items:center; color:var(--fg);">
+          <span style="font-size:2rem; margin-right:0.5rem;">📖</span>
+          E se volete...
+        </span>
+      </div>
+  
+      <p>
+        All’ingresso del teatro sarà presente un banchetto con libri di empowerment: non semplici testi, ma strumenti pratici, emozionanti e sorprendenti, pensati per chi vuole vivere e relazionarsi con più consapevolezza.
+      </p>
+      <p>
+        Durante la serata sarà possibile incontrare l’autore <strong>Alessio Etzi</strong>, formatore, coach e autore di numerosi libri sull’empowerment personale e la crescita interiore, per un firmacopie personalizzato e per scambiare due parole su ciò che conta davvero: la libertà di essere se stessi.
+      </p>
+      <p>
+        Per ogni libro venduto, <strong>5 € saranno devoluti in beneficenza</strong>. Un gesto concreto per trasformare parole e pensieri in azioni utili, perché la comunicazione autentica parte anche dalla cura verso gli altri.
+      </p>
+  
+    </div>
+  </section>
+
+
+  <section id="info">
+    <div class="container">
+      <h3>Info pratiche</h3>
+      <ul>
+        <li><strong>Quando:</strong> 26 Settembre 2025, ore 21:15</li>
+        <li><strong>Dove:</strong> Teatro Puccini, Firenze</li>
+        <li><strong>Durata indicativa:</strong> ~ 1h 45min</li>
+        <li><strong>Target:</strong> aperto a tutti; utile a professionisti, team, educatori, comunicatori, HR, counselor, coach, studenti.</li>
+      </ul>
+
+      <!-- Mappa opzionale: sostituisci con l'embed corretto di Google Maps -->
+      <!--
+      <iframe class="map" src="https://www.google.com/maps/embed?..."></iframe>
+      -->
+
+      
+    </div>
+  </section>
+
+  <section>
+    <div class="container center">
+      <h3>Parlare o Comunicare? Vieni a vivere la differenza.</h3>
+      <p>26 Settembre 2025 · Teatro Puccini, Firenze</p>
+      <a href="https://www.evients.com/events/la-comunicazione-va-a-teatro/4ff8a5940f9b4376bd99c46f9a9e9980" class="btn">Prenota ora</a>
+    </div>
+  </section>
+
+</main>
+
+<footer style="background: #111; color: #eee; padding: 2rem 0; font-family: sans-serif;">
+  <div class="container" style="max-width: 960px; margin: 0 auto; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;">
+    
+    <!-- Contatti -->
+    <div class="footer-contact" style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem;">
+      <a href="mailto:intelligenzaemotiva.va.a.teatro@gmail.com" 
+         style="display: inline-flex; align-items: center; color: #eee; text-decoration: none; transition: color 0.2s;">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
+          <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v.217l-8 4.8-8-4.8V4z"/>
+          <path d="M0 6.383V12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6.383l-7.555 4.533a1 1 0 0 1-1.11 0L0 6.383z"/>
+        </svg>
+        <span style="margin-left: 0.5rem; font-size: 0.95rem;">intelligenzaemotiva.va.a.teatro@gmail.com</span>
+      </a>
+    </div>
+
+    <!-- Social -->
+    <div class="footer-social" style="display: flex; gap: 1.5rem; align-items: center;">
+      <!-- Instagram -->
+      <a href="https://www.instagram.com/intelligenzaemotivavaateatro" target="_blank" 
+         style="display: inline-flex; align-items: center; color: #eee; text-decoration: none; transition: color 0.2s;">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.17.056 1.97.24 2.427.407a4.92 4.92 0 0 1 1.675 1.086 4.92 4.92 0 0 1 1.085 1.675c.167.457.351 1.256.406 2.427.058 1.266.069 1.646.069 4.85s-.012 3.584-.069 4.85c-.055 1.17-.239 1.97-.406 2.427a4.918 4.918 0 0 1-1.085 1.675 4.92 4.92 0 0 1-1.675 1.085c-.457.167-1.256.351-2.427.406-1.266.058-1.646.069-4.85.069s-3.584-.012-4.85-.069c-1.17-.055-1.97-.239-2.427-.406a4.92 4.92 0 0 1-1.675-1.085 4.92 4.92 0 0 1-1.085-1.675c-.167-.457-.351-1.256-.406-2.427C2.175 15.747 2.163 15.367 2.163 12s.012-3.584.069-4.85c.055-1.17.239-1.97.406-2.427a4.92 4.92 0 0 1 1.085-1.675 4.92 4.92 0 0 1 1.675-1.085c.457-.167 1.256-.351 2.427-.406 1.266-.058 1.646-.07 4.85-.07zm0 1.838c-3.17 0-3.544.012-4.79.069-1.04.048-1.605.218-1.98.363a3.112 3.112 0 0 0-1.128.732 3.11 3.11 0 0 0-.732 1.128c-.145.375-.315.94-.363 1.98-.057 1.246-.069 1.62-.069 4.79s.012 3.544.069 4.79c.048 1.04.218 1.605.363 1.98.17.44.397.828.732 1.128.3.335.688.562 1.128.732.375.145.94.315 1.98.363 1.246.057 1.62.069 4.79.069s3.544-.012 4.79-.069c1.04-.048 1.605-.218 1.98-.363a3.107 3.107 0 0 0 1.128-.732 3.106 3.106 0 0 0 .732-1.128c.145-.375.315-.94.363-1.98.057-1.246.069-1.62.069-4.79s-.012-3.544-.069-4.79c-.048-1.04-.218-1.605-.363-1.98a3.11 3.11 0 0 0-.732-1.128 3.113 3.113 0 0 0-1.128-.732c-.375-.145-.94-.315-1.98-.363-1.246-.057-1.62-.069-4.79-.069z"/>
+          <path d="M12 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zm0 10.162a3.999 3.999 0 1 1 0-7.998 3.999 3.999 0 0 1 0 7.998z"/>
+          <circle cx="18.406" cy="5.594" r="1.44"/>
+        </svg>
+        <span style="margin-left: 0.5rem; font-size: 0.95rem;">Instagram</span>
+      </a>
+
+      <!-- YouTube -->
+      <a href="https://www.youtube.com/@intelligenzaemotivavaateatro" target="_blank" 
+         style="display: inline-flex; align-items: center; color: #eee; text-decoration: none; transition: color 0.2s;">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M23.498 6.186a2.997 2.997 0 0 0-2.112-2.12C19.608 3.6 12 3.6 12 3.6s-7.608 0-9.386.466a2.997 2.997 0 0 0-2.112 2.12A31.398 31.398 0 0 0 0 12a31.398 31.398 0 0 0 .502 5.814 2.997 2.997 0 0 0 2.112 2.12C4.392 20.4 12 20.4 12 20.4s7.608 0 9.386-.466a2.997 2.997 0 0 0 2.112-2.12A31.398 31.398 0 0 0 24 12a31.398 31.398 0 0 0-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+        </svg>
+        <span style="margin-left: 0.5rem; font-size: 0.95rem;">YouTube</span>
+      </a>
+    </div>
+
+    <!-- Copyright -->
+    <div class="footer-copy" style="width: 100%; text-align: center; margin-top: 1.5rem; font-size: 0.85rem; color: #777;">
+      © 2025 – La Comunicazione va a Teatro
+    </div>
+
+  </div>
+</footer>
+
+<script>
+  // Countdown verso 26 Settembre 2025 21:15 Europe/Rome
+  (function(){
+    const target = new Date('2025-09-26T21:15:00+02:00').getTime(); // CEST (Europe/Rome)
+
+    const el = document.getElementById('countdown'); 
+    const labels = ['Giorni','Ore','Minuti','Secondi'];
+
+    function pad(n){return n<10?'0'+n:n;}
+
+    function render(diff){
+      const sec = Math.floor(diff/1000);
+      const days = Math.floor(sec/86400);
+      const hours = Math.floor((sec%86400)/3600);
+      const mins = Math.floor((sec%3600)/60);
+      const secs = Math.floor(sec%60);
+
+      const values = [days, hours, mins, secs];
+      el.innerHTML = values.map((v,i)=>`
+        <div class="cd-box">
+          <span class="cd-num">${pad(v)}</span>
+          <span class="cd-label">${labels[i]}</span>
+        </div>
+      `).join('');
+    }
+
+    function tick(){
+      const now = Date.now();
+      const diff = target - now;
+      if(diff <= 0){
+        el.innerHTML = '<div class="cd-box"><span class="cd-num">00</span><span class="cd-label">Inizio!</span></div>';
+        clearInterval(timer);
+        return;
+      }
+      render(diff);
+    }
+
+    tick();
+    const timer = setInterval(tick, 1000);
+  })();
+</script>
+
+</body>
+</html>
