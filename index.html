@@ -525,6 +525,60 @@
     section#concept {
       margin-top: -32px;
     }
+    .contributo-list {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+      align-items: flex-start;
+      justify-content: flex-start;
+      margin-top: 32px;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .contributo-card {
+      display: flex;
+      align-items: center;
+      gap: 56px;
+      box-shadow: none;
+      padding: 12px 0;
+      width: 100%;
+      min-width: 0;
+    }
+    .contributo-card img {
+      width: 320px;
+      max-width: 36vw;
+      height: auto;
+      background: #fff;
+      box-shadow: none;
+      flex-shrink: 0;
+      display: block;
+    }
+    .contributo-card .contributo-text {
+      color: var(--fg);
+      font-size: 1em;
+      line-height: 1.5;
+      font-family: inherit;
+      font-weight: 400;
+      margin: 0;
+      max-width: 1200px;
+    }
+    @media (max-width: 700px) {
+      .contributo-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 18px;
+        padding: 10px 0;
+      }
+      .contributo-card img {
+        width: 100%;
+        max-width: 98vw;
+        margin-bottom: 8px;
+      }
+      .contributo-card .contributo-text {
+        max-width: 100%;
+      }
+    }
   </style>
 </head>
 <body>
@@ -567,7 +621,6 @@
         <li><strong>❤️ Emozione</strong> – esperienze che restano nel cuore</li>
       </ul>
       <div class="cta-block">
-        <a href="#programma" class="btn" style="background:var(--accent-2); color:#000;">Scopri il programma</a>
       </div>
       <div style="display:flex;flex-direction:column;align-items:center;gap:24px;margin-top:40px;">
         <img src="dataTeatro.png" alt="Data Teatro" style="max-width:480px;width:100%;height:auto;border-radius:18px;box-shadow:0 2px 16px rgba(0,0,0,0.10);">
@@ -611,6 +664,26 @@
           <img src="Gli attori erranti LOGO.jpg" alt="Logo Attori Erranti" style="width:160px;height:160px;object-fit:contain;display:block;background:#fff;border-radius:50%;">
         </div>
         <img class="foto-animata" src="ATTORI ERRANTI 4.jpg" alt="Attori Erranti" style="flex:1 1 0;min-width:320px;max-width:700px;width:100%;height:auto;object-fit:cover;border-radius:36px;box-shadow:0 4px 32px rgba(0,0,0,0.13);order:2;transition:transform .35s cubic-bezier(.22,1,.36,1),box-shadow .35s cubic-bezier(.22,1,.36,1);">
+      </div>
+    </div>
+  </section>
+
+  <!-- Il Preludio -->
+  <section id="preludio">
+    <div class="container" style="max-width:1100px;">
+      <h3>Il Preludio</h3>
+      <div style="display: flex; gap: 48px; align-items: center; flex-wrap: wrap;">
+        <div style="flex:1 1 340px; min-width:260px; max-width:500px; display: flex; flex-direction: column; justify-content: center;">
+          <p style="font-size:1.1em; margin-bottom: 0;">
+            Realizzato da <strong>I Cor ❤sini</strong><br>
+            Marco Aiazzi, Sabrina Banfi e Cinzia Corongiu. Attori che facevamo parte di varie compagnie di Barberino di Mugello, che dopo il covid si sono riunite in un’unica compagnia
+          </p>
+        </div>
+        <div style="display: flex; flex-direction: row; gap: 18px; flex:1 1 340px; min-width:180px; max-width:400px; justify-content: flex-end;">
+          <img src="aiazzi.png" alt="Marco Aiazzi" style="width: 120px; height: 120px; object-fit: cover; border-radius: 14px; box-shadow: 0 2px 8px rgba(0,0,0,0.10);">
+          <img src="banfi.png" alt="Sabrina Banfi" style="width: 120px; height: 120px; object-fit: cover; border-radius: 14px; box-shadow: 0 2px 8px rgba(0,0,0,0.10);">
+          <img src="corongiu.png" alt="Cinzia Corongiu" style="width: 120px; height: 120px; object-fit: cover; border-radius: 14px; box-shadow: 0 2px 8px rgba(0,0,0,0.10);">
+        </div>
       </div>
     </div>
   </section>
@@ -820,9 +893,40 @@
         <!-- In collaborazione -->
     <section>
       <div class="container">
-        <h3>In collaborazione con:</h3>
+        <h3>In collaborazione con</h3>
         <div class="center" style="margin-top:24px;">
           <img src="logo_MIP.jpg" alt="Logo MIP" style="max-width:440px; width:100%; height:auto;">
+        </div>
+      </div>
+    </section>
+
+    <!-- Con il contributo di -->
+    <section>
+      <div class="container">
+        <h3>Con il contributo di</h3>
+        <div class="contributo-list">
+          <!-- Enegan -->
+          <div class="contributo-card">
+            <img src="ENEGAN.jpg" alt="Enegan">
+            <p class="contributo-text">
+              Enegan è il primo fornitore Italia a garantire solo energia “pulita”, realizzando così un progetto per cui eravamo considerati visionari, cioè rendere ogni singola impresa e persona protagonista dello sviluppo sostenibile.
+            </p>
+          </div>
+          <!-- PerDormire -->
+          <div class="contributo-card" style="flex-direction: column; align-items: flex-start; gap: 32px;">
+            <div style="display: flex; align-items: center; gap: 56px; width: 100%;">
+              <img src="dormire.jpg" alt="PerDormire">
+              <p class="contributo-text">
+                PerDormire è un brand di proprietà del Materassificio Montalese, storica realtà toscana specializzata nella produzione artigianale e nella distribuzione di materassi e letti 100% Made in Italy.
+              </p>
+            </div>
+            <div style="display: flex; align-items: center; gap: 56px; width: 100%;">
+              <img src="home.jpg.bmp" alt="Novità HOME">
+              <p class="contributo-text">
+                Novità HOME nasce dalla passione per il viaggio, con l’obiettivo di unire culture e tradizioni da tutto il mondo. Ogni oggetto racconta una storia: tessuti indonesiani, legni e cabinet cinesi, ricami indiani, tende in seta curda. Così nasce Novità HOME, specializzata nell’importazione di artigianato mondiale e riconoscibile per il suo stile unico.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
